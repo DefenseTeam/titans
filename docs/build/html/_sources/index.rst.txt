@@ -9,7 +9,7 @@ Welcome to titans's documentation!
 blablabla...
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Table of Contents:
 
    overview

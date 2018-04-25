@@ -1,19 +1,38 @@
-安装和部署
+Installation and Deployment
 ===========================
 
 blablabla...
 
-单机版
+Standalone
 ----------
+
 单机版部署模式
 
 Yarn
 ----------
+
 Yarn部署模式
 
 Docker
 ----------
-docker部署模式
+
+`Docker <https://www.docker.com/>`_ is a popular container runtime, and `Docker Compose <https://docs.docker.com/compose/>`_ is a convenient way to run titan containers locally.
+
+Docker Images
+^^^^^^^^^^^^^^^^^^
+
+Titans use some offical images(eg. zookeeper, redis, flink, elk), rebuild some service images(eg. kafka, restfull-api) hosted on `Aliyun Container Registry <https://dev.aliyun.com/>`_.
+
+The folling shows the images used in titans:
+
+* *zookeeper: zookeeper:3.4*
+* *kafka: registry.cn-hangzhou.aliyuncs.com/htsec/titan_kafka*
+* redis: redis:latest
+* flink: flink:1.4
+* restfull: registry.cn-hangzhou.aliyuncs.com/htsec/titan_restfull
+* elasticsearch: ...
+* logstash: ...
+
 
 Kubernetes
 ----------

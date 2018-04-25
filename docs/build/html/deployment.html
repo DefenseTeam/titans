@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>安装和部署 &mdash; titans 0.0.1 documentation</title>
+  <title>Installation and Deployment &mdash; titans 0.0.1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Collector" href="collector.html" />
-    <link rel="prev" title="快速开始" href="quickstart.html" /> 
+    <link rel="prev" title="QuickStart" href="quickstart.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -81,12 +81,15 @@
             
               <p class="caption"><span class="caption-text">Table of Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="overview.html">概览</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quickstart.html">快速开始</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">安装和部署</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">单机版</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">QuickStart</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation and Deployment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#standalone">Standalone</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#yarn">Yarn</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#docker">Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docker">Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#docker-images">Docker Images</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#kubernetes">Kubernetes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#aws">AWS</a></li>
 </ul>
@@ -141,7 +144,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>安装和部署</li>
+      <li>Installation and Deployment</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -160,11 +163,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="id1">
-<h1>安装和部署<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="installation-and-deployment">
+<h1>Installation and Deployment<a class="headerlink" href="#installation-and-deployment" title="Permalink to this headline">¶</a></h1>
 <p>blablabla…</p>
-<div class="section" id="id2">
-<h2>单机版<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="standalone">
+<h2>Standalone<a class="headerlink" href="#standalone" title="Permalink to this headline">¶</a></h2>
 <p>单机版部署模式</p>
 </div>
 <div class="section" id="yarn">
@@ -173,7 +176,21 @@
 </div>
 <div class="section" id="docker">
 <h2>Docker<a class="headerlink" href="#docker" title="Permalink to this headline">¶</a></h2>
-<p>docker部署模式</p>
+<p><a class="reference external" href="https://www.docker.com/">Docker</a> is a popular container runtime, and <a class="reference external" href="https://docs.docker.com/compose/">Docker Compose</a> is a convenient way to run titan containers locally.</p>
+<div class="section" id="docker-images">
+<h3>Docker Images<a class="headerlink" href="#docker-images" title="Permalink to this headline">¶</a></h3>
+<p>Titans use some offical images(eg. zookeeper, redis, flink, elk), rebuild some service images(eg. kafka, restfull-api) hosted on <a class="reference external" href="https://dev.aliyun.com/">Aliyun Container Registry</a>.</p>
+<p>The folling shows the images used in titans:</p>
+<ul class="simple">
+<li><em>zookeeper: zookeeper:3.4</em></li>
+<li><em>kafka: registry.cn-hangzhou.aliyuncs.com/htsec/titan_kafka</em></li>
+<li>redis: redis:latest</li>
+<li>flink: flink:1.4</li>
+<li>restfull: registry.cn-hangzhou.aliyuncs.com/htsec/titan_restfull</li>
+<li>elasticsearch: …</li>
+<li>logstash: …</li>
+</ul>
+</div>
 </div>
 <div class="section" id="kubernetes">
 <h2>Kubernetes<a class="headerlink" href="#kubernetes" title="Permalink to this headline">¶</a></h2>
@@ -196,7 +213,7 @@
         <a href="collector.html" class="btn btn-neutral float-right" title="Collector" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="quickstart.html" class="btn btn-neutral" title="快速开始" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="quickstart.html" class="btn btn-neutral" title="QuickStart" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
