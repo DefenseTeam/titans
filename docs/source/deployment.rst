@@ -25,7 +25,7 @@ Titans is composed of many services, each service started in one container. In t
 
 The folling shows the images used in titans:
 
-	* *zookeeper: zookeeper:3.4*
+	* ``zookeeper: zookeeper:3.4``
 	* *kafka: registry.cn-hangzhou.aliyuncs.com/htsec/titan_kafka:latest*
 	* *redis: redis:latest*
 	* *flink: flink:1.4*
