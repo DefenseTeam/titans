@@ -25,7 +25,7 @@ Titans is composed of many services, each service started in one container. In t
 
 The folling shows the images used in titans:
 
-	* ``zookeeper: zookeeper:3.4``
+	* *zookeeper: zookeeper:3.4*
 	* *kafka: registry.cn-hangzhou.aliyuncs.com/htsec/titan_kafka:latest*
 	* *redis: redis:latest*
 	* *flink: flink:1.4*
@@ -44,25 +44,33 @@ Starting titans by docker compose as following steps.
 
 .. code-block:: bash
 
-	wget https://raw.githubusercontent.com/DefenseTeam/titans/master/deployment/docker/docker-compose.yml
+	>> wget https://raw.githubusercontent.com/DefenseTeam/titans/master/deployment/docker/docker-compose.yml
 
 2. Launch titans in the foreground
 
 .. code-block:: bash
 
-	docker-compose up
+	>> docker-compose up
 
 or in the backgroud
 
 .. code-block:: bash
 
-	docker-compose up -d
+	>> docker-compose up -d
 
 3. scale flink task slots
 
 .. code-block:: bash
 
-	docker-compose scale taskmanager=<N>
+	>> docker-compose scale taskmanager=<N>
+
+4. submit and start your cep rule.
+
+.. code-block:: bash
+
+	>> curl -XPUT http://<your server>:9527/tasks/upload/ -F file=@<rule name>.yml
+	>> curl -XPOST http://your server>:9527/tasks/run/<rule name>
+
 
 
 Kubernetes
