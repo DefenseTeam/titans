@@ -1,0 +1,65 @@
+version: '3'
+services:
+  zookeeper:
+    image: zookeeper:3.4
+    restart: always
+    hostname: zookeeper
+    expose:
+      - 2181
+
+  kafka:
+    image: registry.cn-hangzhou.aliyuncs.com/htsec/titan_kafka
+    hostname: kafka
+    depends_on:
+      - zookeeper
+    expose:
+      - 9092
+    links:
+      - zookeeper:zookeeper
+
+  jobmanager:
+    image: flink:1.4
+    depends_on:
+      - kafka
+    expose:
+      - 6123
+    ports:
+      - 8081:8081
+    command: jobmanager
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=jobmanager
+    links:
+      - kafka:kafka
+    volumes:
+      - titans:/titans
+
+  taskmanager:
+    image: flink:1.4
+    expose:
+      - 6121
+      - 6122
+    depends_on:
+      - jobmanager
+    command: taskmanager
+    links:
+      - "jobmanager:jobmanager"
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=jobmanager
+    links:
+      - kafka:kafka
+
+  restfull:
+    image: registry.cn-hangzhou.aliyuncs.com/htsec/titan_restfull
+    ports:
+      - 9527:9527
+    depends_on:
+      - jobmanager
+    command: ["python3", "run.py"]
+    links:
+      - kafka:kafka
+      - jobmanager:jobmanager
+    volumes:
+      - titans:/titans
+
+volumes:
+  titans:
