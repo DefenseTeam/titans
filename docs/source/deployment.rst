@@ -1,9 +1,9 @@
-安装和部署
+Installation and Deployment
 ===========================
 
 blablabla...
 
-单机版
+Standalone
 ----------
 单机版部署模式
 
