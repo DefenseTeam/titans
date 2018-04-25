@@ -5,15 +5,20 @@ blablabla...
 
 Standalone
 ----------
+
 单机版部署模式
 
 Yarn
 ----------
+
 Yarn部署模式
 
 Docker
 ----------
-docker部署模式
+
+`Docker <https://www.docker.com/>`_。 is a popular container runtime
+
+
 
 Kubernetes
 ----------
