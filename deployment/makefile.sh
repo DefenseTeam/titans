@@ -16,9 +16,15 @@ wget -O depends/titans.tgz https://github.com/DefenseTeam/titans/archive/${titan
 wget -O jars/TsapCepEngine.jar https://github.com/DefenseTeam/titans/releases/download/${titans_version}/TsapCEPEngine-assembly-${cep_jar_version}.jar
 
 cd ${root_path}/depends
-tar -xvf kafka.tgz && mv kafka_2.11-1.1.0 kafka
-tar -xvf flink.tgz && mv flink-1.4.2 flink
-tar -xvf titans.tgz && mv titans-${titans_version} titans
+tar -xvf kafka.tgz && rm -f kafka.tgz && mv kafka_2.11-1.1.0 kafka
+tar -xvf flink.tgz && rm -f flink.tgz && mv flink-1.4.2 flink
+tar -xvf titans.tgz && rm -f titans.tgz && mv titans-${titans_version} titans
+
+cd ${root_path}/bin
+wget https://raw.githubusercontent.com/DefenseTeam/titans/master/deployment/standalone/start-local.sh
+wget https://raw.githubusercontent.com/DefenseTeam/titans/master/deployment/standalone/stop-local.sh
+
+tar cfz titans-bin-${titans_version}.tgz *
 
 
 
