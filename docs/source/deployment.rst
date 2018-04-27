@@ -58,7 +58,7 @@ or in the backgroud
 
 	>> docker-compose up -d
 
-3. scale flink task slots
+3. scale flink task managers
 
 .. code-block:: bash
 
@@ -69,7 +69,7 @@ or in the backgroud
 .. code-block:: bash
 
 	>> curl -XPUT http://<your server>:9527/tasks/upload/ -F file=@<rule name>.yml
-	>> curl -XPOST http://your server>:9527/tasks/run/<rule name>
+	>> curl -XPOST http://<your server>:9527/tasks/run/<rule name>
 
 
 
