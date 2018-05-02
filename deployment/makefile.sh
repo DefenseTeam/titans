@@ -10,6 +10,7 @@ cd ${root_path}
 mkdir jars
 mkdir depends
 mkdir bin
+mkdir rules
 
 #wget -O depends/kafka.tgz http://mirrors.tuna.tsinghua.edu.cn/apache/kafka/1.1.0/kafka_2.11-1.1.0.tgz
 cp /tmp/kafka_2.11-1.1.0.tgz depends/kafka.tgz
@@ -22,15 +23,16 @@ cd ${root_path}/depends
 tar -xvf kafka.tgz && rm -f kafka.tgz && mv kafka_2.11-1.1.0 kafka
 tar -xvf flink.tgz && rm -f flink.tgz && mv flink-1.4.2 flink
 tar -xvf titans.tgz && rm -f titans.tgz && mv titans-${titans_version} titans
+mv titans/deployment/docker/restfull/src/ restfull
 
 cd ${root_path}/bin
 wget https://raw.githubusercontent.com/DefenseTeam/titans/master/deployment/standalone/start-local.sh
 wget https://raw.githubusercontent.com/DefenseTeam/titans/master/deployment/standalone/stop-local.sh
+chmod +x start-local.sh
+chmod +x stop-local.sh
 
-cd ${root_path}
-tar cfz titans-bin-${titans_version}.tgz *
-mv titans-bin-${titans_version}.tgz ../
-cd ..
+cd ${root_path}/../
+tar cfz titans-bin-${titans_version}.tgz titans-bin-${titans_version}/
 rm -rf ${root_path}
 
 

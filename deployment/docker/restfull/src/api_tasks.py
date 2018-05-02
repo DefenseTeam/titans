@@ -6,8 +6,9 @@ from flask.ext.restful import reqparse, abort, Resource
 from flask import jsonify
 from flask import request
 
-jar_dir = "/run/jars/"
-rule_dir = "/titans/"
+abspath = os.path.abspath('.')
+jar_dir = os.path.abspath(os.path.join(abspath, '..', '..', 'jars'))
+rule_dir = os.path.abspath(os.path.join(abspath, '..', '..', 'rules'))
 
 
 def get_jar_id():
