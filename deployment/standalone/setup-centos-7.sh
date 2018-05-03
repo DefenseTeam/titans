@@ -8,6 +8,7 @@ xz -d python3.tar.xz
 tar -xvf python3.tar
 cd Python-3.6.4/
 ./configure --with-ssl --prefix=/usr/local/python3.6
+make
 make install
 ln -s /usr/local/python3.6/bin/python3 /usr/bin/python3
 

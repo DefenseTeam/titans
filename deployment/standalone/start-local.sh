@@ -31,7 +31,7 @@ echo "###### starting flink ######"
 ${rootpath}/depends/flink/bin/start-cluster.sh
 for i in {2..3}; do ${rootpath}/depends/flink/bin/taskmanager.sh start; done
 sleep 30
-curl -XPOST http://localhost:8081/upload -H "Expect:" -F "jarfile=${rootpath}/jars/TsapCEPEngine.jar" > ${rootpath}/jars/jar.id
+curl -XPOST http://localhost:8081/upload -H "Expect:" -F "jarfile=@${rootpath}/jars/TsapCEPEngine.jar" > ${rootpath}/jars/jar.id
 echo "###### flink launched success ######"
 
 ###### start restfull api ######
