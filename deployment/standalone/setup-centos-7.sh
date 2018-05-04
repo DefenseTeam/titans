@@ -10,7 +10,9 @@ cd Python-3.6.4/
 ./configure --with-ssl --prefix=/usr/local/python3.6
 make
 make install
-ln -s /usr/local/python3.6/bin/python3 /usr/bin/python3
+ln -s /usr/local/python3.6/bin/python3 /usr/bin/titans-python
+ln -s /usr/local/python3.6/bin/pip3 /usr/bin/titans-pip
+titans-pip install titans-restful
 
 # get packages
 mkdir /opt/tsap/
@@ -35,3 +37,5 @@ flink_path=/opt/tsap/flink-1.4.2/
 
 ${flink_path}bin/start-cluster.sh
 for i in {0..1}; do ${flink_path}bin/taskmanager.sh start; done
+
+
