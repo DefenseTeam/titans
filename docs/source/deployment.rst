@@ -10,7 +10,7 @@ Titans run on GNU/Linux, recommended **CentOS 7**, **Ubuntu 16.04** or **Debian 
 
 .. code-block:: bash
 
-	>> wget -O - https://raw.githubusercontent.com/DefenseTeam/titans/master/deployment/standalone/setup-centos-7.sh | bash
+	wget -O - https://raw.githubusercontent.com/DefenseTeam/titans/master/deployment/standalone/setup-centos-7.sh | bash
 
 Or you can launch a standalone cluster manually.
 
@@ -37,22 +37,22 @@ Setup Titans standalone with following steps:
 
 .. code-block:: bash
 
-	>> tar xzf titans-bin-x.y.z.tgz
-	>> cd titans-bin-x.y.x.tgz
+	tar xzf titans-bin-x.y.z.tgz
+	cd titans-bin-x.y.x.tgz
 
 2. start titans, to stop Titans, there is also a ``stop-local.sh`` script
 
 .. code-block:: bash
 
-	>> bin/start-local.sh
+	bin/start-local.sh
 
 
 3. submit and start your cep rule.
 
 .. code-block:: bash
 
-	>> curl -XPUT http://<your server>:9527/tasks/upload/ -F file=@<rule name>.yml
-	>> curl -XPOST http://<your server>:9527/tasks/run/<rule name>
+	curl -XPUT http://<your server>:9527/tasks/upload/ -F file=@<rule name>.yml
+	curl -XPOST http://<your server>:9527/tasks/run/<rule name>
 
 
 Yarn
@@ -96,32 +96,32 @@ Starting titans by docker compose with following steps.
 
 .. code-block:: bash
 
-	>> wget https://raw.githubusercontent.com/DefenseTeam/titans/master/deployment/docker/docker-compose.yml
+	wget https://raw.githubusercontent.com/DefenseTeam/titans/master/deployment/docker/docker-compose.yml
 
 2. Launch titans in the foreground
 
 .. code-block:: bash
 
-	>> docker-compose up
+	docker-compose up
 
 or in the backgroud
 
 .. code-block:: bash
 
-	>> docker-compose up -d
+	docker-compose up -d
 
 3. scale flink task managers
 
 .. code-block:: bash
 
-	>> docker-compose scale taskmanager=<N>
+	docker-compose scale taskmanager=<N>
 
 4. submit and start your cep rule.
 
-.. code-block:: bash
+.. code-block:: sh
 
-	>> curl -XPUT http://<your server>:9527/tasks/upload/ -F file=@<rule name>.yml
-	>> curl -XPOST http://<your server>:9527/tasks/run/<rule name>
+	curl -XPUT http://<your server>:9527/tasks/upload/ -F file=@<rule name>.yml
+	curl -XPOST http://<your server>:9527/tasks/run/<rule name>
 
 
 
