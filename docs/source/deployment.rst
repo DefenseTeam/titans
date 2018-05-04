@@ -20,7 +20,7 @@ Requirements
 Requirements for Titans include:
 
  * **Java 1.8.x** or higher must be installed
- * **Python3.6.4** must be installed and python package **titans-restful** must be installed (titans-restful can be installed by ``pip install titians-restful`` from pypi)
+ * **Python 3.6.4** must be installed and python package **titans-restful** must be installed (titans-restful can be installed by ``pip install titians-restful`` from pypi)
  * **ssh** must be installed and sshd must be running
 
 Download

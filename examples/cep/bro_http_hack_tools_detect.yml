@@ -1,0 +1,27 @@
+title: bro_http_hack_tools_detect
+level: medium
+stage: exploit
+category: web
+tag: hack_tools
+status: experimental
+description: hack tools scan detection from user_agent
+reference: None
+author: Defense Team
+rules:
+  - query:
+      from: bro-http
+      where:
+          or:
+              - user_agent CONTAINS sqlmap
+              - user_agent CONTAINS nessus
+              - user_agent CONTAINS BBScan
+              - user_agent CONTAINS Havij
+              - user_agent CONTAINS Netsparker
+              - user_agent CONTAINS acunetix
+              - user_agent CONTAINS masscan
+              - user_agent CONTAINS nmap
+              - user_agent CONTAINS nikto
+              - user_agent CONTAINS scan
+      fields:
+          - '*'
+      as: ALARM
