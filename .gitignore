@@ -9,7 +9,7 @@ deployment/docker/restfull/src/__pycache__/
 
 # Distribution / packaging
 .Python
-doc/build/
+docs/build/
 build/
 develop-eggs/
 dist/
