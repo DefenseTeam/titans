@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Installation and Deployment" href="deployment.html" />
+    <link rel="next" title="Configuration and Deployment" href="deployment.html" />
     <link rel="prev" title="Overview" href="overview.html" /> 
 
   
@@ -83,11 +83,12 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">QuickStart</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#input">input</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#component">component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setup-titans-in-standalone-cluster">Setup Titans in standalone cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#run-an-example">Run an example</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="deployment.html">Installation and Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">Configuration and Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">Operations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="collector.html">Collector</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cep_engine.html">Complex Event Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ti_engine.html">Threat Intelligence</a></li>
@@ -159,13 +160,17 @@
             
   <div class="section" id="quickstart">
 <h1>QuickStart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h1>
-<p>The following are examples of supported markup.  On their own, these will not provide a datepicker widget; you will need to instantiate the datepicker on the markup.</p>
-<div class="section" id="input">
-<h2>input<a class="headerlink" href="#input" title="Permalink to this headline">¶</a></h2>
-<p>The simplest case: focusing the input (clicking or tabbing into it) will show the picker.</p>
+<p>Setup a standalone Titans instance and run an example in few simple steps.</p>
+<div class="section" id="setup-titans-in-standalone-cluster">
+<h2>Setup Titans in standalone cluster<a class="headerlink" href="#setup-titans-in-standalone-cluster" title="Permalink to this headline">¶</a></h2>
+<p>Please head to the <a class="reference external" href="http://titans.readthedocs.io/en/latest/deployment.html#standalone">standalone</a> page to setup titans on a static cluster.</p>
+<p>Or on CentOS7 with Internet connected, Titans can be started with the followed commond very quickly and simply.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;&gt; wget -O - https://raw.githubusercontent.com/DefenseTeam/titans/master/deployment/standalone/setup-centos-7.sh <span class="p">|</span> bash
+</pre></div>
 </div>
-<div class="section" id="component">
-<h2>component<a class="headerlink" href="#component" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="run-an-example">
+<h2>Run an example<a class="headerlink" href="#run-an-example" title="Permalink to this headline">¶</a></h2>
 <p>Adding the <code class="docutils literal notranslate"><span class="pre">date</span></code> class to an <code class="docutils literal notranslate"><span class="pre">input-group</span></code> bootstrap component will allow the <code class="docutils literal notranslate"><span class="pre">input-group-addon</span></code> elements to trigger the picker.</p>
 </div>
 </div>
@@ -178,7 +183,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="deployment.html" class="btn btn-neutral float-right" title="Installation and Deployment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="deployment.html" class="btn btn-neutral float-right" title="Configuration and Deployment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="overview.html" class="btn btn-neutral" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

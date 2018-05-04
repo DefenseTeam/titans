@@ -15,6 +15,7 @@ blablabla...
    overview
    quickstart
    deployment
+   operations
    collector
    cep_engine
    ti_engine
