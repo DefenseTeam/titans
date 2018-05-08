@@ -86,8 +86,6 @@ Then start the rule.
 
 	curl -XPOST http://127.0.0.1:9527/tasks/run/bro_http_hack_tools_detect
 
-and response ::
-
 	{
 	  "success": "rule <bro_http_hack_tools_detect> started"
 	}
@@ -98,9 +96,7 @@ Check the rule running status
 .. code-block:: bash
 
 	curl -XGET http://127.0.0.1:9527/tasks/status/bro_http_hack_tools_detect
-
-and response ::
-
+	
 	{
 	  "name": "bro_http_hack_tools_detect",
 	  "status": "running",
