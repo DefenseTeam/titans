@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 yum update
-yum install -y wget curl vim java-1.8.0-openjdk* gcc make bzip2-devel ncurses-devel sqlite-devel gdbm-devel xz-devel tk-devel readline-devel
+yum install -y wget curl vim java-1.8.0-openjdk* gcc make bzip2-devel ncurses-devel sqlite-devel gdbm-devel xz-devel tk-devel readline-devel libaio
 yum install -y libcurl-devel openssl-devel
 wget -O python3.tar.xz https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tar.xz
 xz -d python3.tar.xz

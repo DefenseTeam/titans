@@ -6,7 +6,7 @@ Titans can be run on YARN, Docker, Kubernetes, AWS or a simple standalone deploy
 Standalone
 ----------
 
-Titans run on GNU/Linux, recommended **CentOS 7**, **Ubuntu 16.04** or **Debian stretch**. On a single CentOS 7 machine with Internet conncted, titans can setup by a script simply.
+Titans run on GNU/Linux, recommended **CentOS 7**, **Ubuntu 16.04** or **Debian stretch**. On a single CentOS 7 machine with Internet conncted, titans can be setup by a script simply.
 
 .. code-block:: bash
 
@@ -81,7 +81,7 @@ The folling shows the images used in titans:
 	* *kafka: registry.cn-hangzhou.aliyuncs.com/htsec/titan_kafka:latest*
 	* *redis: redis:latest*
 	* *flink: flink:1.4*
-	* *restfull: registry.cn-hangzhou.aliyuncs.com/htsec/titan_restfull:latest*
+	* *restful: registry.cn-hangzhou.aliyuncs.com/htsec/titan_restful:latest*
 	* *elasticsearch: ...*
 	* *logstash: ...*
 
