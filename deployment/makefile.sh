@@ -22,7 +22,7 @@ cp /tmp/mariadb-10.2.14-linux-x86_64.tar.gz depends/mariadb.tar.gz
 cp /tmp/redis-4.0.9.tar.gz depends/redis.tar.gz
 cp /tmp/elasticsearch-6.2.4.tar.gz depends/elasticsearch.tar.gz
 cp /tmp/logstash-6.2.4.tar.gz depends/logstash.tar.gz
-cp /tmp/kibana-4.5.4-linux-x64.tar.gz depends/kibana.tar.gz
+cp /tmp/kibana-6.2.4-linux-x86_64.tar.gz depends/kibana.tar.gz
 
 #cd ${root_path}/depends
 #tar -xvf kafka.tgz && rm -f kafka.tgz && mv kafka_2.11-1.1.0 kafka
